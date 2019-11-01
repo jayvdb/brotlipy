@@ -103,10 +103,10 @@ ffi.cdef("""
         2) Use BrotliSetCustomDictionary
         3) Use BrotliDecompressStream
         4) Clean up and free state with BrotliDestroyState
-    */
+    *//*
     void BrotliDecoderSetCustomDictionary(
         BrotliDecoderState* s, size_t size, const uint8_t* dict);
-
+    */
     /* Returns true, if decoder has some unconsumed output.
        Otherwise returns false. */
     BROTLI_BOOL BrotliDecoderHasMoreOutput(const BrotliDecoderState* s);
@@ -209,11 +209,11 @@ ffi.cdef("""
        ringbuffer, e.g. for custom static dictionaries for data formats.
        Not to be confused with the built-in transformable dictionary of Brotli.
        To decode, use BrotliSetCustomDictionary() of the decoder with the same
-       dictionary. */
+       dictionary. *//*
     void BrotliEncoderSetCustomDictionary(BrotliEncoderState* state,
                                           size_t size,
                                           const uint8_t* dict);
-
+    */
     /* Check if encoder is in "finished" state, i.e. no more input is
        acceptable and no more output will be produced.
        Works only with BrotliEncoderCompressStream workflow.
